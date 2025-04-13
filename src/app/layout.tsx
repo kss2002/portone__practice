@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: '포트원 결제연동 샘플',
   description: '이 프로덕트는 샘플용 입니다',
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
