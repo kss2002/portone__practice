@@ -9,6 +9,8 @@ export default function NotFoundPage() {
           <Link href="/">메인으로 돌아가기</Link>
         </button>
       </div>
+      <p>not-found</p>
+      <h2>포트원 결제 모듈 페이지 제작 중..</h2>
     </>
   );
 }
