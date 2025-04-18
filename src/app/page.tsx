@@ -8,12 +8,13 @@ import PaymentForm, { Item } from './ui/payment-form';
 
 const portone = PaymentClient({ secret: process.env.V2_API_SECRET });
 
+// 이 부분이 item의 id와 이름, 가격, 통화 정보를 담고 있습니다.
 const items = new Map<string, Omit<Item, 'id'>>([
   [
-    'shoes',
+    'winter',
     {
-      name: '신발',
-      price: 1000,
+      name: '윈터 사진을 NFT로 즐겨보자.',
+      price: 9000,
       currency: 'KRW',
     },
   ],
@@ -86,10 +87,10 @@ async function completePayment(paymentId: string) {
 }
 
 export default function Home() {
-  const shoes = items.get('shoes')!;
+  const shoes = items.get('winter')!;
   const item = {
     ...shoes,
-    id: 'shoes',
+    id: 'winter',
     currency: shoes.currency,
   };
 
