@@ -6,7 +6,6 @@ import {
 } from '@portone/server-sdk/payment';
 import PaymentForm, { Item } from './payment-form';
 import Link from 'next/link';
-import style from '../page.module.css';
 
 const portone = PaymentClient({ secret: process.env.V2_API_SECRET });
 
@@ -98,18 +97,16 @@ export default function Home() {
 
   return (
     <>
-      <h2 className={style.h2}>결제창</h2>
+      <h2 className="h2">결제창</h2>
       <PaymentForm
         item={item}
         storeId={process.env.STORE_ID}
         channelKey={process.env.CHANNEL_KEY}
         completePaymentAction={completePayment}
       />
-      <div className={style.sub_container}>
+      <div className="sub_container">
         <button>
-          <Link className={style.link} href="/">
-            홈으로 돌아가기
-          </Link>
+          <Link href="/">홈으로 돌아가기</Link>
         </button>
       </div>
     </>
