@@ -98,17 +98,19 @@ export default function Home() {
 
   return (
     <>
-      <h2 className={uiStyle.h2}>결제창</h2>
-      <PaymentForm
-        item={item}
-        storeId={process.env.STORE_ID}
-        channelKey={process.env.CHANNEL_KEY}
-        completePaymentAction={completePayment}
-      />
-      <div className={uiStyle.sub_container}>
-        <button>
-          <Link href="/">홈으로 돌아가기</Link>
-        </button>
+      <div>
+        <h2 className={uiStyle.h2}>결제창</h2>
+        <PaymentForm
+          item={item}
+          storeId={process.env.STORE_ID}
+          channelKey={process.env.CHANNEL_KEY}
+          completePaymentAction={completePayment}
+        />
+        <div className={uiStyle.sub_container}>
+          <button>
+            <Link href="/">홈</Link>
+          </button>
+        </div>
       </div>
     </>
   );
